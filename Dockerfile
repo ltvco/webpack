@@ -1,4 +1,4 @@
-FROM node:6-wheezy
+FROM node:8
 RUN apt-get -y update && \
     apt-get -y upgrade && \
     apt-get -y install gcc autoconf libpng-dev
