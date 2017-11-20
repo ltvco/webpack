@@ -7,4 +7,4 @@ RUN npm install -g \
   webpack webpack-dev-server yarn imagemin imagemin-optipng imagemin-svgo \
   imagemin-gifsicle imagemin-mozjpeg imagemin-jpegoptim imagemin-jpeg-recompress \
   imagemin-pngquant imagemin-webpack-plugin favicons-webpack-plugin
-WORKDIR /app
+RUN npm rebuild node-sass && npm install
