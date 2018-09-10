@@ -23,6 +23,5 @@ RUN npm install -g \
   imagemin-jpeg-recompress \
   imagemin-pngquant \
   imagemin-webpack-plugin \
-  favicons-webpack-plugin \ 
   webpack-manifest-plugin
 RUN npm rebuild node-sass
