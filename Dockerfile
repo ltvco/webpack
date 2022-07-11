@@ -1,18 +1,18 @@
-FROM node:8
+FROM node:18.5.0
 RUN apt-get -y update && \
-    apt-get -y upgrade && \
-    apt-get -y install gcc autoconf libpng-dev
+  apt-get -y upgrade && \
+  apt-get -y install gcc autoconf libpng-dev
 RUN npm config set unsafe-perm=true
 RUN npm install -g \
-  webpack@4.18.0 \
-  webpack-dev-server@3.1.8 \
-  copy-webpack-plugin@4.5.2 \
-  extract-text-webpack-plugin@3.0.2 \
-  css-loader@1.0.0 \
-  style-loader@0.23.0 \
-  node-sass@4.9.3 \
-  sass-loader@7.1.0 \
-  sass-resources-loader@1.3.3 \
+  webpack@5.73.0 \
+  webpack-dev-server@4.9.3 \
+  copy-webpack-plugin@11.0.0 \
+  mini-css-extract-plugin@2.6.1  \
+  css-loader@6.7.1 \
+  style-loader@3.3.1 \
+  node-sass@7.0.1 \
+  sass-loader@13.0.2 \
+  sass-resources-loader@2.2.5 \
   imagemin \
   imagemin-optipng \
   imagemin-svgo \
@@ -22,5 +22,5 @@ RUN npm install -g \
   imagemin-jpeg-recompress@5.1.0 \
   imagemin-pngquant \
   imagemin-webpack-plugin@2.2.0 \
-  webpack-manifest-plugin@2.0.3
+  webpack-manifest-plugin@5.0.0
 RUN npm rebuild node-sass
